@@ -85,6 +85,8 @@ La capa de Dominio no depende de ninguna otra. Infrastructure implementa los con
 | Citas | GET | `/api/citas/consultar/{id}` | Detalle de una cita |
 | Agenda | GET | `/api/medicos/agenda/{id}/{fecha}` | Agenda del día de un médico |
 
+<img width="1883" height="919" alt="image" src="https://github.com/user-attachments/assets/56f920c1-8803-4b94-a862-53ce0264936f" />
+
 ---
 
 ## Stack tecnológico
@@ -109,7 +111,7 @@ git clone https://github.com/sau-c/AgendaMedica_API.git
 cd src
 
 # 2. Configurar la cadena de conexión
-# Editar src/API/appsettings.Development.json
+# Editar src/AgendaMedica.API/appsettings.json en caso de tener SQL Server con contraseña
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Database=AgendaMedica;User Id=USUARIO_DE_SQL;Password=CONTRASENA_SQL;TrustServerCertificate=True;"
@@ -117,7 +119,9 @@ cd src
 }
 
 # 3. Aplicar migraciones
-Ejecutar en Visual Studio en la 'Consola del Administrador de Paquetes` el comando 'update-database'
+Ejecutar en Visual Studio en la 'Consola del Administrador de Paquetes` el comando 'update-database' para crear la base de datos en SQL
+
+# 4. Abrir y ejecutar el procedimiento almacenado 'PoblarBase.sql', luego hacer en SQL hacer "EXEC PoblarBase"
 
 # 4. Ejecutar
 dotnet run

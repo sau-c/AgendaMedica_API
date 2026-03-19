@@ -114,24 +114,27 @@ La capa de Dominio no depende de ninguna otra. Infrastructure implementa los con
 **Prerrequisitos:** .NET 8 SDK, SQL Server 2022 y EF CORE 9.0.14
 
 ```bash
-# 1. Clonar el repositorio
+# 1. Clonar el repositorio desde consola en un carpeta para trabajar
 git clone https://github.com/sau-c/AgendaMedica_API.git
-cd src
 
 # 2. Configurar la cadena de conexión
-# Editar src/AgendaMedica.API/appsettings.json en caso de tener SQL Server con contraseña
+# Abrir la solución del proyecto (AgendaMedica.sln) en Visual Studio 
+# Editar AgendaMedica.API/appsettings.json en caso de tener SQL Server con contraseña
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Database=AgendaMedica;User Id=USUARIO_DE_SQL;Password=CONTRASENA_SQL;TrustServerCertificate=True;"
   }
 }
 
-# 3. Aplicar migraciones
-Ejecutar en Visual Studio en la 'Consola del Administrador de Paquetes` el comando 'update-database' para crear la base de datos en SQL
+# 3. Establecer proyecto de inicio
+En la solucion de Visual Studio, Click derecho sobre 'AgendaMedica.API' y en "Establecer como proyecto de inicio"
 
-# 4. Abrir y ejecutar el procedimiento almacenado 'PoblarBase.sql', luego hacer en SQL hacer "EXEC PoblarBase"
+# 4. Aplicar migraciones
+En Visual Studio ir a Herramientas > Administrador de Paquetes NuGet > Consola del Administrador de Paquetes, en la opcion proyecto predeterminado seleccionar "AgendaMedica.Infrastructure" y ejecutar el comando 'update-database' para crear la base de datos en SQL junto a las tablas
 
-# 4. Ejecutar
+# 5. Abrir SQL Server Management Studio y ejecutar el procedimiento almacenado que esta en src/SQL/PoblarBase.sql, luego ejecutar con "EXEC PoblarBase"
+
+# 6. Ejecutar
 dotnet run
 
 o simplemente correr con el boton de Visual Studio por https

@@ -1,11 +1,11 @@
 USE [AgendaMedica]
 GO
-/****** Object:  StoredProcedure [dbo].[poblarAgendaMedica]    Script Date: 18/03/2026 10:06:05 a. m. ******/
+/****** Object:  StoredProcedure [dbo].[poblarBase]    Script Date: 18/03/2026 10:06:05 a. m. ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE PROCEDURE [dbo].[poblarAgendaMedica]
+CREATE PROCEDURE [dbo].[poblarBase]
 AS
 BEGIN
     SET NOCOUNT ON;

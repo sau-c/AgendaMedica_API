@@ -1,0 +1,6 @@
+@AgendaMedica.API_HostAddress = http://localhost:5140
+
+GET {{AgendaMedica.API_HostAddress}}/pacientes/
+Accept: application/json
+
+###

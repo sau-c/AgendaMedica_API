@@ -85,7 +85,15 @@ La capa de Dominio no depende de ninguna otra. Infrastructure implementa los con
 | Citas | GET | `/api/citas/consultar/{id}` | Detalle de una cita |
 | Agenda | GET | `/api/medicos/agenda/{id}/{fecha}` | Agenda del día de un médico |
 
+## Pruebas GET
 <img width="1883" height="919" alt="image" src="https://github.com/user-attachments/assets/56f920c1-8803-4b94-a862-53ce0264936f" />
+<img width="1197" height="775" alt="image" src="https://github.com/user-attachments/assets/1962ce20-5d8b-4505-9b2e-a276f28e49f4" />
+<img width="1244" height="797" alt="image" src="https://github.com/user-attachments/assets/0f69ebc7-2ebf-4ccc-bcc0-d9081de787dc" />
+
+## Validacion de dominio con Value Object
+<img width="1347" height="338" alt="image" src="https://github.com/user-attachments/assets/3cfe1541-1d5d-43b0-ab33-0e6784c2ecde" />
+<img width="1353" height="386" alt="image" src="https://github.com/user-attachments/assets/f8f88d31-2283-43d7-ab4b-f476bc5ef0c5" />
+
 
 ---
 
